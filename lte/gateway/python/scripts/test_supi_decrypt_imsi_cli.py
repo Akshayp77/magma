@@ -134,7 +134,7 @@ def decrypt_msin(client, args):
         ue_ciphertext=ue_msin.ue_encrypt_context.cipher_text,
         ue_encrypted_mac=ue_msin.ue_encrypt_context.mac,
     )
-    response = client.M5GDecryptImsiSUCIRegistration(request)
+    response = client.M5GDecryptMsinSUCIRegistration(request)
     print("Deconcealed IMSI received from subscriberdb:", response.ue_msin_recv.hex())
 
 
